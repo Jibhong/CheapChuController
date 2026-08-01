@@ -181,12 +181,13 @@ bool sl_read_frame(HANDLE hSerial, sl_frame_t *out)
 
     size_t i = 0;
     out->seq = body[i++];
-    memcpy(out->slider, &body[i], 32);
-    i += 32;
+    memcpy(out->slider_bits, &body[i], 4);
+    i += 4;
     memcpy(out->air, &body[i], 6);
     i += 6;
     out->test_btn = body[i++];
     out->service_btn = body[i++];
+    out->coin_btn = body[i++];
 
     return true;
 }

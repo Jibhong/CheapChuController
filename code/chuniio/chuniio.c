@@ -279,10 +279,20 @@ static unsigned int __stdcall chuni_io_slider_thread_proc(void *ctx)
             memcpy(chuni_io_latest_air, frame.air, sizeof(chuni_io_latest_air));
             chuni_io_latest_test_btn = frame.test_btn;
             chuni_io_latest_service_btn = frame.service_btn;
+            
+            if (frame.coin_btn && !chuni_io_coin) {
+                chuni_io_coins++;
+            }
+            chuni_io_coin = frame.coin_btn;
             LeaveCriticalSection(&chuni_io_state_lock);
         }
 
-        callback(frame.slider);
+        uint8_t slider_pressure[32];
+        for (int i = 0; i < 32; i++) {
+            slider_pressure[i] = (frame.slider_bits[i / 8] & (1 << (i % 8))) ? 255 : 0;
+        }
+
+        callback(slider_pressure);
     }
 
     if (hSerial != INVALID_HANDLE_VALUE) {

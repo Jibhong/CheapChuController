@@ -15,15 +15,16 @@ extern "C" {
 
 #define SL_SYNC0 0xAA
 #define SL_SYNC1 0x55
-#define SL_PACKET_SIZE 44 // 2 sync + 1 seq + 32 slider + 6 air + 2 btn + 1 checksum
+#define SL_PACKET_SIZE 17 // 2 sync + 1 seq + 4 slider + 6 air + 3 btn + 1 checksum
 
 typedef struct
 {
     uint8_t seq;
-    uint8_t slider[32];
+    uint8_t slider_bits[4];
     uint8_t air[6];
     uint8_t test_btn;
     uint8_t service_btn;
+    uint8_t coin_btn;
 } sl_frame_t;
 
 // Scans COM1..COM256 for a device matching PICO_USB_VID/PID via the
