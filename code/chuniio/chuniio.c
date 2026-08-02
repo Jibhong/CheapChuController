@@ -58,7 +58,7 @@ static uint16_t chuni_io_coins;
 // -----------------------------------------------------------------------
 static void chuni_io_log(const char *fmt, ...)
 {
-    FILE *f = fopen("chuniio_pico.log", "a");
+    FILE *f = fopen("chuniio.log", "a");
     if (!f) {
         return;
     }
@@ -235,7 +235,11 @@ static unsigned int __stdcall chuni_io_slider_thread_proc(void *ctx)
                     chuni_io_device_connected = false;
                     LeaveCriticalSection(&chuni_io_state_lock);
                 }
-                Sleep(1000);
+                uint8_t empty_pressure[32] = {0};
+                for (int i = 0; i < 1000 && !chuni_io_slider_stop_flag; i++) {
+                    callback(empty_pressure);
+                    Sleep(1);
+                }
                 continue;
             }
 
@@ -243,7 +247,11 @@ static unsigned int __stdcall chuni_io_slider_thread_proc(void *ctx)
             hSerial = sl_open_port(port);
             if (hSerial == INVALID_HANDLE_VALUE) {
                 chuni_io_log("failed to open COM%d, retrying...", port);
-                Sleep(1000);
+                uint8_t empty_pressure[32] = {0};
+                for (int i = 0; i < 1000 && !chuni_io_slider_stop_flag; i++) {
+                    callback(empty_pressure);
+                    Sleep(1);
+                }
                 continue;
             }
 
@@ -271,6 +279,8 @@ static unsigned int __stdcall chuni_io_slider_thread_proc(void *ctx)
                     LeaveCriticalSection(&chuni_io_state_lock);
                 }
             }
+            uint8_t empty_pressure[32] = {0};
+            callback(empty_pressure);
             continue;
         }
 
