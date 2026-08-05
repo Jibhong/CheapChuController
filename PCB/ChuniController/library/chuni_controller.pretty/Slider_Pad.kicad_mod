@@ -1,0 +1,78 @@
+(footprint "Slider_Pad"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 2.54 1.27 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "1c3f9500-c453-48bb-877a-402289631f72")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "Slider_Pad"
+		(at 0 -2.54 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "4d472e83-008b-4769-9e51-30198ef37c9e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c1cf96b1-9a70-430a-9b54-83ec90ce57ca")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5ef7fa4f-0ce4-4912-930f-ceaf1b9ac7de")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr exclude_from_pos_files exclude_from_bom)
+	(fp_text user "${REFERENCE}"
+		(at 0 -1.04 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "e6c30d17-677d-420d-9eda-1d71edd77c7a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at 12.5 50)
+		(size 24.6 99.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(clearance 0.2)
+		(thermal_bridge_angle 45)
+		(uuid "f6c7559a-1b75-4bc6-a25f-72b71fcf2cb0")
+	)
+	(embedded_fonts no)
+)
