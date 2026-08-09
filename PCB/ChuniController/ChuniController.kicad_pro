@@ -681,13 +681,29 @@
         "uuid": "78a07370-9529-4114-be30-8ab9d3e7e0cd"
       }
     ],
-    "used_designators": "D2-6,R1-18,J1-5,#PWR1-10,U2,Q1-12",
+    "used_designators": "D2-6,#PWR1-30,R1-18,J1-5,U2-6,Q1-12",
     "variants": []
   },
   "sheets": [
     [
       "78a07370-9529-4114-be30-8ab9d3e7e0cd",
       "ChuniController"
+    ],
+    [
+      "4dd27aa0-f8f0-4f19-b021-a4827a7a836a",
+      "AirReceiver"
+    ],
+    [
+      "2ed5debb-a3d8-4999-8321-d2bf386ad2f4",
+      "IRReceiver"
+    ],
+    [
+      "b8778464-45a8-40a8-8839-569167ca584a",
+      "IRReceiver1"
+    ],
+    [
+      "43cddcc1-42a2-4b3a-8ca7-386440085070",
+      "IRReceiver2"
     ]
   ],
   "text_variables": {},
