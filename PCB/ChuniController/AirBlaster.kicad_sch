@@ -1,0 +1,1007 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "f3aab33c-861c-475c-82a4-568b477d6595")
+	(paper "A4")
+	(lib_symbols)
+	(junction
+		(at 35.56 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1e06e082-0150-4b95-85b1-b8d05520c899")
+	)
+	(junction
+		(at 35.56 90.17)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5d2515d9-7585-49dd-b460-903edcf73cc9")
+	)
+	(junction
+		(at 35.56 123.19)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6193caec-a9fe-4ded-bf47-6f34ab91359e")
+	)
+	(junction
+		(at 33.02 78.74)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "88a3c95e-3366-4374-8546-408922a5524a")
+	)
+	(junction
+		(at 35.56 57.15)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "89204106-2618-46fb-88e4-c6b741680475")
+	)
+	(junction
+		(at 35.56 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9770baf4-663d-4300-a9bc-d8975bfb0b10")
+	)
+	(junction
+		(at 33.02 95.25)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b5cc668c-e920-437f-ab23-4137fb2116c0")
+	)
+	(junction
+		(at 33.02 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e1508453-d8f5-485a-b834-06a8fcfdf485")
+	)
+	(junction
+		(at 33.02 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ec866e4b-e9bc-45a6-8a2a-c4f39883add1")
+	)
+	(junction
+		(at 33.02 128.27)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f4d6d77f-784f-4a50-ac62-cb0ee348948e")
+	)
+	(bus_entry
+		(at 38.1 62.23)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "16541176-5327-4030-859b-0cb6bd7bd64d")
+	)
+	(bus_entry
+		(at 38.1 111.76)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b7ece87-f82f-44ae-8e03-842e948deee7")
+	)
+	(bus_entry
+		(at 38.1 78.74)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e65bcb4-6f9c-476d-bdcd-8d87c0a5d182")
+	)
+	(bus_entry
+		(at 38.1 128.27)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "958167b8-d53a-4a20-aa77-034ec551ff3d")
+	)
+	(bus_entry
+		(at 38.1 154.94)
+		(size -2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ca6a128-3e47-4f68-adad-f4617e6884d7")
+	)
+	(bus_entry
+		(at 38.1 95.25)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0fd9771-1684-4b6b-81a4-2bb0a283cf18")
+	)
+	(bus_entry
+		(at 38.1 45.72)
+		(size 2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3b97b3e-f73e-4046-9a7b-52d04b4c71d0")
+	)
+	(bus_entry
+		(at 38.1 161.29)
+		(size -2.54 -2.54)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b47b592a-3a37-47f9-bb05-0ae631f886ba")
+	)
+	(wire
+		(pts
+			(xy 50.8 62.23) (xy 33.02 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0519ffd1-fcd1-44f7-a74f-67fef6d2b70c")
+	)
+	(wire
+		(pts
+			(xy 40.64 43.18) (xy 50.8 43.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f4b36fd-679c-487a-9b69-1798b49a50eb")
+	)
+	(wire
+		(pts
+			(xy 33.02 95.25) (xy 33.02 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d5af47b-f3c5-464a-942a-ea572bf5064b")
+	)
+	(wire
+		(pts
+			(xy 33.02 128.27) (xy 33.02 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1f3fc52b-dbf5-40e1-ac4e-dada3a110608")
+	)
+	(wire
+		(pts
+			(xy 33.02 45.72) (xy 33.02 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20936c16-5a21-4918-a30b-29f23b0f5f0b")
+	)
+	(wire
+		(pts
+			(xy 40.64 92.71) (xy 50.8 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "300b12b4-a396-493e-85ed-cc4469bfa18a")
+	)
+	(wire
+		(pts
+			(xy 33.02 95.25) (xy 50.8 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "348b208a-119d-47af-b9e8-12fd472a791c")
+	)
+	(wire
+		(pts
+			(xy 35.56 106.68) (xy 35.56 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a60adb8-b0b6-4592-8798-1ff00762c25b")
+	)
+	(wire
+		(pts
+			(xy 35.56 40.64) (xy 35.56 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "40f5862e-1442-478f-93fe-34b35bf5af41")
+	)
+	(wire
+		(pts
+			(xy 35.56 106.68) (xy 50.8 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "426fe578-e139-42ef-9c3d-fa2ffe5f2318")
+	)
+	(wire
+		(pts
+			(xy 33.02 78.74) (xy 33.02 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4de1ad18-4198-4244-9188-b3d54bc9cb5e")
+	)
+	(wire
+		(pts
+			(xy 40.64 59.69) (xy 50.8 59.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e2b4ee2-286f-4063-a1ad-41d1f107ab45")
+	)
+	(wire
+		(pts
+			(xy 33.02 111.76) (xy 33.02 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70552bbc-f793-49cc-9073-1efb871f5303")
+	)
+	(wire
+		(pts
+			(xy 40.64 125.73) (xy 50.8 125.73)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7183248f-79fd-415e-9a51-b4ee452d3881")
+	)
+	(wire
+		(pts
+			(xy 35.56 158.75) (xy 33.02 156.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90106d82-e2bf-46b1-b25c-68a9aae49721")
+	)
+	(wire
+		(pts
+			(xy 40.64 109.22) (xy 50.8 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95babeda-7766-47be-94ac-ba583b42f261")
+	)
+	(wire
+		(pts
+			(xy 35.56 57.15) (xy 50.8 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab4ee281-24f0-402e-a303-1b0ecdcc00bb")
+	)
+	(wire
+		(pts
+			(xy 50.8 45.72) (xy 33.02 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0b38b1c-5e87-4fb9-a485-68dcf063c3a4")
+	)
+	(wire
+		(pts
+			(xy 35.56 57.15) (xy 35.56 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1533e54-7623-4a69-832c-2a61531ad6e3")
+	)
+	(wire
+		(pts
+			(xy 35.56 90.17) (xy 35.56 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7e34444-011a-49cd-8c61-6c55ad0309f9")
+	)
+	(wire
+		(pts
+			(xy 33.02 111.76) (xy 50.8 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be36ec88-79d2-4169-a8fb-5e5f72e0ed44")
+	)
+	(wire
+		(pts
+			(xy 50.8 40.64) (xy 35.56 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf0dc565-a040-46c1-bddd-0d35b209ce38")
+	)
+	(wire
+		(pts
+			(xy 35.56 73.66) (xy 50.8 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d21f9839-881a-43ab-af6a-4db4f8c80018")
+	)
+	(wire
+		(pts
+			(xy 35.56 90.17) (xy 50.8 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d69c0ebd-3c99-4af9-91ed-04c95d1f28d6")
+	)
+	(wire
+		(pts
+			(xy 35.56 123.19) (xy 50.8 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d6f56cd9-16f8-46a1-99fc-1ade2579037d")
+	)
+	(wire
+		(pts
+			(xy 40.64 76.2) (xy 50.8 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de956b12-34e3-435f-9f7a-bdbd52f1a9a4")
+	)
+	(wire
+		(pts
+			(xy 33.02 128.27) (xy 50.8 128.27)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e246b464-5a0a-4a38-bcb8-4c3ae18232ec")
+	)
+	(wire
+		(pts
+			(xy 33.02 62.23) (xy 33.02 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e682e48c-348c-4f46-9a49-c1ffbb7bc12d")
+	)
+	(bus
+		(pts
+			(xy 38.1 45.72) (xy 38.1 161.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eb28a078-1b88-425c-a0b5-26fa2c12a56f")
+	)
+	(wire
+		(pts
+			(xy 35.56 73.66) (xy 35.56 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f1bb90be-36bf-4f40-bad4-64a50dd476e7")
+	)
+	(wire
+		(pts
+			(xy 35.56 123.19) (xy 35.56 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fafff528-ae88-468d-ba42-527248819ed2")
+	)
+	(wire
+		(pts
+			(xy 50.8 78.74) (xy 33.02 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ffeb4069-7252-45a1-872b-e78ace72759a")
+	)
+	(label "EMIT1"
+		(at 40.64 43.18 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "04e945ad-c6c1-403b-81fa-6e4711e9b4b9")
+	)
+	(label "EMIT6"
+		(at 40.64 125.73 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "54e0973f-d488-4dc0-9316-13e3d69081a0")
+	)
+	(label "EMIT3"
+		(at 40.64 76.2 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "61809ac8-32dc-43c7-b821-db96bf5a5b73")
+	)
+	(label "GND"
+		(at 33.02 156.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "75621e0a-369d-495e-b36d-175ef1295624")
+	)
+	(label "EMIT5"
+		(at 40.64 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a4850ee4-a3d3-43f4-b63f-4af5a9f4e8fa")
+	)
+	(label "EMIT4"
+		(at 40.64 92.71 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c52d600e-4238-479f-a62b-c2dea189708b")
+	)
+	(label "3V3"
+		(at 35.56 152.4 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "cc93a7f7-d682-42e9-b57e-26f3988f7af3")
+	)
+	(label "EMIT2"
+		(at 40.64 59.69 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f80c0683-bfca-442e-96e8-69c729395a0b")
+	)
+	(hierarchical_label "{3V3 GND EMIT[1..6] SENSE[1..6]}"
+		(shape bidirectional)
+		(at 38.1 161.29 270)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2cf220b7-1787-469c-89ee-2745515417ce")
+	)
+	(sheet
+		(at 50.8 87.63)
+		(size 13.97 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "126c9f33-2db4-4213-8b87-a7386558733a")
+		(property "Sheetname" "IRBlaster3"
+			(at 50.8 86.9184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "IRBlaster.kicad_sch"
+			(at 50.8 98.3746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3V3" input
+			(at 50.8 90.17 180)
+			(uuid "afc3fc9e-5781-4964-be5e-57db25962575")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIG" input
+			(at 50.8 92.71 180)
+			(uuid "acd5b5d9-fdf3-4e29-838f-89cc9355fa13")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GND" output
+			(at 50.8 95.25 180)
+			(uuid "89bcc7f2-6c6a-4de9-a04b-cc1db5eca29a")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ChuniController"
+				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/f4890c87-dddd-4c83-a122-45ebc2484d5c"
+					(page "10")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 50.8 54.61)
+		(size 13.97 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "739b5c5d-614d-4d59-a586-a6d8ecaf685a")
+		(property "Sheetname" "IRBlaster1"
+			(at 50.8 53.8984 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "IRBlaster.kicad_sch"
+			(at 50.8 65.3546 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3V3" input
+			(at 50.8 57.15 180)
+			(uuid "5cbdd362-f385-4fc4-a588-25c0a69c8302")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIG" input
+			(at 50.8 59.69 180)
+			(uuid "8538af9e-9e2c-429e-830a-605ca0d81425")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GND" output
+			(at 50.8 62.23 180)
+			(uuid "289ad0a5-ad8a-466e-9b3e-a8ff297535eb")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ChuniController"
+				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/f4890c87-dddd-4c83-a122-45ebc2484d5c"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 50.8 104.14)
+		(size 13.97 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "940eed77-cefb-466d-8c84-927758a5d772")
+		(property "Sheetname" "IRBlaster4"
+			(at 50.8 103.4284 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "IRBlaster.kicad_sch"
+			(at 50.8 114.8846 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3V3" input
+			(at 50.8 106.68 180)
+			(uuid "58978b5d-2069-417a-b206-44fd589a3540")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIG" input
+			(at 50.8 109.22 180)
+			(uuid "13a4839f-ac7c-4356-b94b-3b0d04add08d")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GND" output
+			(at 50.8 111.76 180)
+			(uuid "2a7ce6d9-44e8-423e-8e6a-08fdc7201be0")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ChuniController"
+				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/f4890c87-dddd-4c83-a122-45ebc2484d5c"
+					(page "11")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 50.8 120.65)
+		(size 13.97 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "9e05f03f-d3cc-4e50-b7ac-e2e1b4cccf01")
+		(property "Sheetname" "IRBlaster5"
+			(at 50.8 119.9384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "IRBlaster.kicad_sch"
+			(at 50.8 131.3946 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3V3" input
+			(at 50.8 123.19 180)
+			(uuid "c9dd6d5e-3460-418b-8835-924ae3eb518f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIG" input
+			(at 50.8 125.73 180)
+			(uuid "2bd84541-ea8f-447e-9e44-5a8adfa08f1f")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GND" output
+			(at 50.8 128.27 180)
+			(uuid "b69105e1-522d-45b5-bd1e-c6b6dc171fc1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ChuniController"
+				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/f4890c87-dddd-4c83-a122-45ebc2484d5c"
+					(page "12")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 50.8 71.12)
+		(size 13.97 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "a16da42f-b88a-4039-9f08-d541f37ff19d")
+		(property "Sheetname" "IRBlaster2"
+			(at 50.8 70.4084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "IRBlaster.kicad_sch"
+			(at 50.8 81.8646 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3V3" input
+			(at 50.8 73.66 180)
+			(uuid "e0f90676-d40b-4b1b-9860-529183c4d9a4")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIG" input
+			(at 50.8 76.2 180)
+			(uuid "226a3956-66ff-4094-9ed5-dfef5ddcd880")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GND" output
+			(at 50.8 78.74 180)
+			(uuid "a94e98e9-7bc2-4a22-a090-b2efe293b4f2")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ChuniController"
+				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/f4890c87-dddd-4c83-a122-45ebc2484d5c"
+					(page "9")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 50.8 38.1)
+		(size 13.97 10.16)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "f1ef60e4-a811-4610-9c64-eceecc108e5f")
+		(property "Sheetname" "IRBlaster"
+			(at 50.8 37.3884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "IRBlaster.kicad_sch"
+			(at 50.8 48.8446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "3V3" input
+			(at 50.8 40.64 180)
+			(uuid "c9d5ea90-d237-4c1f-9046-b34bc29bdd83")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "SIG" input
+			(at 50.8 43.18 180)
+			(uuid "50bc3d40-8bc8-40bb-9844-ec3538322ac6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(pin "GND" output
+			(at 50.8 45.72 180)
+			(uuid "4ab5ac81-42ee-4995-a994-2790d2e56cb7")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(instances
+			(project "ChuniController"
+				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/f4890c87-dddd-4c83-a122-45ebc2484d5c"
+					(page "7")
+				)
+			)
+		)
+	)
+)

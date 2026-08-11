@@ -1148,7 +1148,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "1404232e-feec-4933-b192-23f6d3b89cbb")
-		(property "Reference" "#PWR021"
+		(property "Reference" "#PWR013"
 			(at 152.4 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -1209,15 +1209,15 @@
 		(instances
 			(project "ChuniController"
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/2ed5debb-a3d8-4999-8321-d2bf386ad2f4"
-					(reference "#PWR021")
+					(reference "#PWR013")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/43cddcc1-42a2-4b3a-8ca7-386440085070"
-					(reference "#PWR027")
+					(reference "#PWR025")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/b8778464-45a8-40a8-8839-569167ca584a"
-					(reference "#PWR029")
+					(reference "#PWR019")
 					(unit 1)
 				)
 			)
@@ -1235,7 +1235,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "25f267c6-2f34-414a-976b-f459a80b0697")
-		(property "Reference" "#PWR022"
+		(property "Reference" "#PWR014"
 			(at 162.56 82.55 0)
 			(hide yes)
 			(show_name no)
@@ -1296,15 +1296,15 @@
 		(instances
 			(project "ChuniController"
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/2ed5debb-a3d8-4999-8321-d2bf386ad2f4"
-					(reference "#PWR022")
+					(reference "#PWR014")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/43cddcc1-42a2-4b3a-8ca7-386440085070"
-					(reference "#PWR028")
+					(reference "#PWR026")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/b8778464-45a8-40a8-8839-569167ca584a"
-					(reference "#PWR030")
+					(reference "#PWR020")
 					(unit 1)
 				)
 			)
@@ -1344,7 +1344,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 41.402 97.79 90)
 			(hide yes)
 			(show_name no)
@@ -1394,7 +1394,7 @@
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/b8778464-45a8-40a8-8839-569167ca584a"
-					(reference "R9")
+					(reference "R6")
 					(unit 1)
 				)
 			)
@@ -1412,7 +1412,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "466e32b8-0c0f-4802-ac48-bb8b92225145")
-		(property "Reference" "#PWR014"
+		(property "Reference" "#PWR011"
 			(at 43.18 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -1472,15 +1472,15 @@
 		(instances
 			(project "ChuniController"
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/2ed5debb-a3d8-4999-8321-d2bf386ad2f4"
-					(reference "#PWR014")
+					(reference "#PWR011")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/43cddcc1-42a2-4b3a-8ca7-386440085070"
-					(reference "#PWR025")
+					(reference "#PWR023")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/b8778464-45a8-40a8-8839-569167ca584a"
-					(reference "#PWR019")
+					(reference "#PWR017")
 					(unit 1)
 				)
 			)
@@ -1498,7 +1498,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "46e5316c-84ec-434b-b9a0-915fd42cfa28")
-		(property "Reference" "#PWR016"
+		(property "Reference" "#PWR010"
 			(at 36.83 93.98 0)
 			(hide yes)
 			(show_name no)
@@ -1559,15 +1559,15 @@
 		(instances
 			(project "ChuniController"
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/2ed5debb-a3d8-4999-8321-d2bf386ad2f4"
-					(reference "#PWR016")
+					(reference "#PWR010")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/43cddcc1-42a2-4b3a-8ca7-386440085070"
-					(reference "#PWR024")
+					(reference "#PWR022")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/b8778464-45a8-40a8-8839-569167ca584a"
-					(reference "#PWR018")
+					(reference "#PWR016")
 					(unit 1)
 				)
 			)
@@ -1585,7 +1585,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "54195dc2-eeca-4d2e-998a-c36a564763a4")
-		(property "Reference" "Q4"
+		(property "Reference" "Q1"
 			(at 37.3507 60.96 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1605,7 +1605,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 35.56 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -1647,15 +1647,15 @@
 		(instances
 			(project "ChuniController"
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/2ed5debb-a3d8-4999-8321-d2bf386ad2f4"
-					(reference "Q4")
+					(reference "Q1")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/43cddcc1-42a2-4b3a-8ca7-386440085070"
-					(reference "Q6")
+					(reference "Q5")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/b8778464-45a8-40a8-8839-569167ca584a"
-					(reference "Q5")
+					(reference "Q3")
 					(unit 1)
 				)
 			)
@@ -1673,7 +1673,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "620397aa-d573-432f-a82f-f0259a0b96ab")
-		(property "Reference" "R5"
+		(property "Reference" "R3"
 			(at 45.72 69.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1695,7 +1695,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 41.402 71.12 90)
 			(hide yes)
 			(show_name no)
@@ -1737,7 +1737,7 @@
 		(instances
 			(project "ChuniController"
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/2ed5debb-a3d8-4999-8321-d2bf386ad2f4"
-					(reference "R5")
+					(reference "R3")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/43cddcc1-42a2-4b3a-8ca7-386440085070"
@@ -1745,7 +1745,7 @@
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/b8778464-45a8-40a8-8839-569167ca584a"
-					(reference "R6")
+					(reference "R5")
 					(unit 1)
 				)
 			)
@@ -1763,7 +1763,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "ac0cbbb1-2736-4e79-8c6d-f6c63442ff79")
-		(property "Reference" "Q3"
+		(property "Reference" "Q2"
 			(at 37.3507 87.63 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1783,7 +1783,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "LED_THT:LED_D5.0mm"
 			(at 35.56 91.44 0)
 			(hide yes)
 			(show_name no)
@@ -1825,15 +1825,15 @@
 		(instances
 			(project "ChuniController"
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/2ed5debb-a3d8-4999-8321-d2bf386ad2f4"
-					(reference "Q3")
+					(reference "Q2")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/43cddcc1-42a2-4b3a-8ca7-386440085070"
-					(reference "Q7")
+					(reference "Q6")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/b8778464-45a8-40a8-8839-569167ca584a"
-					(reference "Q8")
+					(reference "Q4")
 					(unit 1)
 				)
 			)
@@ -1851,7 +1851,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "b8d3de73-ef7f-4d5f-b3a2-b852323782ab")
-		(property "Reference" "U4"
+		(property "Reference" "U3"
 			(at 129.54 54.61 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2029,7 +2029,7 @@
 		(instances
 			(project "ChuniController"
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/2ed5debb-a3d8-4999-8321-d2bf386ad2f4"
-					(reference "U4")
+					(reference "U3")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/43cddcc1-42a2-4b3a-8ca7-386440085070"
@@ -2037,7 +2037,7 @@
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/b8778464-45a8-40a8-8839-569167ca584a"
-					(reference "U6")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -2055,7 +2055,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c26ee73d-4cee-4bbd-b69f-70c54907e02d")
-		(property "Reference" "#PWR013"
+		(property "Reference" "#PWR012"
 			(at 43.18 107.95 0)
 			(hide yes)
 			(show_name no)
@@ -2115,15 +2115,15 @@
 		(instances
 			(project "ChuniController"
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/2ed5debb-a3d8-4999-8321-d2bf386ad2f4"
-					(reference "#PWR013")
+					(reference "#PWR012")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/43cddcc1-42a2-4b3a-8ca7-386440085070"
-					(reference "#PWR026")
+					(reference "#PWR024")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/b8778464-45a8-40a8-8839-569167ca584a"
-					(reference "#PWR020")
+					(reference "#PWR018")
 					(unit 1)
 				)
 			)
@@ -2141,7 +2141,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fd0ad631-83a6-4b0a-9d84-7ecfeaa24766")
-		(property "Reference" "#PWR015"
+		(property "Reference" "#PWR09"
 			(at 36.83 67.31 0)
 			(hide yes)
 			(show_name no)
@@ -2202,15 +2202,15 @@
 		(instances
 			(project "ChuniController"
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/2ed5debb-a3d8-4999-8321-d2bf386ad2f4"
-					(reference "#PWR015")
+					(reference "#PWR09")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/43cddcc1-42a2-4b3a-8ca7-386440085070"
-					(reference "#PWR023")
+					(reference "#PWR021")
 					(unit 1)
 				)
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a/b8778464-45a8-40a8-8839-569167ca584a"
-					(reference "#PWR017")
+					(reference "#PWR015")
 					(unit 1)
 				)
 			)

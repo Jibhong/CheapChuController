@@ -681,7 +681,7 @@
         "uuid": "78a07370-9529-4114-be30-8ab9d3e7e0cd"
       }
     ],
-    "used_designators": "D2-6,#PWR1-30,R1-18,J1-5,U2-6,Q1-12",
+    "used_designators": "A1,D1-7,#PWR1-30,R1-28,J1-5,U1-6,Q1-13",
     "variants": []
   },
   "sheets": [
@@ -704,6 +704,34 @@
     [
       "43cddcc1-42a2-4b3a-8ca7-386440085070",
       "IRReceiver2"
+    ],
+    [
+      "f4890c87-dddd-4c83-a122-45ebc2484d5c",
+      "AirBlaster"
+    ],
+    [
+      "f1ef60e4-a811-4610-9c64-eceecc108e5f",
+      "IRBlaster"
+    ],
+    [
+      "739b5c5d-614d-4d59-a586-a6d8ecaf685a",
+      "IRBlaster1"
+    ],
+    [
+      "a16da42f-b88a-4039-9f08-d541f37ff19d",
+      "IRBlaster2"
+    ],
+    [
+      "126c9f33-2db4-4213-8b87-a7386558733a",
+      "IRBlaster3"
+    ],
+    [
+      "940eed77-cefb-466d-8c84-927758a5d772",
+      "IRBlaster4"
+    ],
+    [
+      "9e05f03f-d3cc-4e50-b7ac-e2e1b4cccf01",
+      "IRBlaster5"
     ]
   ],
   "text_variables": {},

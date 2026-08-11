@@ -693,7 +693,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0008e040-fb3a-4dc8-8864-73cf4e8b9853")
-		(property "Reference" "R10"
+		(property "Reference" "R2"
 			(at 40.64 45.72 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -713,7 +713,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 40.64 53.848 90)
 			(hide yes)
 			(show_name no)
@@ -755,7 +755,7 @@
 		(instances
 			(project "ChuniController"
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a"
-					(reference "R10")
+					(reference "R2")
 					(unit 1)
 				)
 			)
@@ -773,7 +773,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3827f2e7-a293-4297-8d44-600deb32a607")
-		(property "Reference" "R3"
+		(property "Reference" "R1"
 			(at 33.02 45.72 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -793,7 +793,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 33.02 53.848 90)
 			(hide yes)
 			(show_name no)
@@ -835,7 +835,7 @@
 		(instances
 			(project "ChuniController"
 				(path "/78a07370-9529-4114-be30-8ab9d3e7e0cd/4dd27aa0-f8f0-4f19-b021-a4827a7a836a"
-					(reference "R3")
+					(reference "R1")
 					(unit 1)
 				)
 			)
