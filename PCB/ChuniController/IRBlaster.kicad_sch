@@ -764,7 +764,7 @@
 		)
 		(uuid "f750bbd5-984a-450b-8f16-e9d66f67f4d9")
 	)
-	(hierarchical_label "3V3"
+	(hierarchical_label "5V"
 		(shape input)
 		(at 50.8 66.04 180)
 		(effects
