@@ -936,7 +936,7 @@
 				)
 			)
 		)
-		(property "Value" "10K"
+		(property "Value" "100k"
 			(at 72.39 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1036,7 +1036,7 @@
 				)
 			)
 		)
-		(property "Value" "32R"
+		(property "Value" "50R"
 			(at 68.58 62.23 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1136,7 +1136,7 @@
 				)
 			)
 		)
-		(property "Value" "1K"
+		(property "Value" "1k"
 			(at 62.23 74.93 90)
 			(show_name no)
 			(do_not_autoplace no)

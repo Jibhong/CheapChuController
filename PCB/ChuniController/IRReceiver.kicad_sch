@@ -965,10 +965,10 @@
 		(uuid "40e356d3-bb35-435e-b545-d0a08e380797")
 	)
 	(junction
-		(at 43.18 67.31)
+		(at 45.72 67.31)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "703ea4fa-3c18-484b-bde7-43da0ad1e8a4")
+		(uuid "5e75723e-c02d-4814-a496-a574ebf32aa0")
 	)
 	(junction
 		(at 153.67 67.31)
@@ -1106,7 +1106,7 @@
 	)
 	(wire
 		(pts
-			(xy 43.18 67.31) (xy 111.76 67.31)
+			(xy 43.18 67.31) (xy 45.72 67.31)
 		)
 		(stroke
 			(width 0)
@@ -1143,6 +1143,16 @@
 			(type default)
 		)
 		(uuid "7adefb4d-cd03-479e-ab88-53d7c1acad61")
+	)
+	(wire
+		(pts
+			(xy 45.72 67.31) (xy 111.76 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8305714c-d3d8-4875-94ca-c2319ecf756c")
 	)
 	(wire
 		(pts
@@ -1536,7 +1546,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 43.18 74.93 0)
+		(at 45.72 74.93 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1547,7 +1557,7 @@
 		(fields_autoplaced yes)
 		(uuid "466e32b8-0c0f-4802-ac48-bb8b92225145")
 		(property "Reference" "#PWR011"
-			(at 43.18 81.28 0)
+			(at 45.72 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1558,7 +1568,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 43.18 80.01 0)
+			(at 45.72 80.01 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1568,7 +1578,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 43.18 74.93 0)
+			(at 45.72 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1579,7 +1589,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 43.18 74.93 0)
+			(at 45.72 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1590,7 +1600,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 43.18 74.93 0)
+			(at 45.72 74.93 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1828,7 +1838,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 151.892 60.96 90)
 			(hide yes)
 			(show_name no)
@@ -1886,7 +1896,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 43.18 71.12 0)
+		(at 45.72 71.12 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -1897,7 +1907,7 @@
 		(fields_autoplaced yes)
 		(uuid "620397aa-d573-432f-a82f-f0259a0b96ab")
 		(property "Reference" "R3"
-			(at 45.72 69.8499 0)
+			(at 48.26 69.8499 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1908,7 +1918,7 @@
 			)
 		)
 		(property "Value" "30k"
-			(at 45.72 72.3899 0)
+			(at 48.26 72.3899 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1919,7 +1929,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
-			(at 41.402 71.12 90)
+			(at 43.942 71.12 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1930,7 +1940,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 43.18 71.12 0)
+			(at 45.72 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1941,7 +1951,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 43.18 71.12 0)
+			(at 45.72 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2385,7 +2395,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
 			(at 155.702 60.96 90)
 			(hide yes)
 			(show_name no)
