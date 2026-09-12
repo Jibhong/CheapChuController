@@ -18,13 +18,13 @@
 //     the Pico yet -- see note at bottom of file)
 // -----------------------------------------------------------------------
 
-#include <windows.h>
 #include <process.h>
+#include <stdarg.h>
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
-#include <stdarg.h>
 #include <string.h>
+#include <windows.h>
 
 #include "chuniio.h"
 #include "serial_link.h"
@@ -56,123 +56,113 @@ static uint16_t chuni_io_coins;
 // Logging: writes to a plain text file next to the DLL so you can debug
 // connection/auto-scan issues without attaching a debugger to the game.
 // -----------------------------------------------------------------------
-static void chuni_io_log(const char *fmt, ...)
-{
-    FILE *f = fopen("chuniio.log", "a");
-    if (!f) {
-        return;
-    }
+static void chuni_io_log(const char *fmt, ...) {
+  FILE *f = fopen("chuniio.log", "a");
+  if (!f) {
+    return;
+  }
 
-    SYSTEMTIME st;
-    GetLocalTime(&st);
-    fprintf(f, "[%02d:%02d:%02d.%03d] ", st.wHour, st.wMinute, st.wSecond, st.wMilliseconds);
+  SYSTEMTIME st;
+  GetLocalTime(&st);
+  fprintf(f, "[%02d:%02d:%02d.%03d] ", st.wHour, st.wMinute, st.wSecond,
+          st.wMilliseconds);
 
-    va_list args;
-    va_start(args, fmt);
-    vfprintf(f, fmt, args);
-    va_end(args);
+  va_list args;
+  va_start(args, fmt);
+  vfprintf(f, fmt, args);
+  va_end(args);
 
-    fprintf(f, "\n");
-    fclose(f);
+  fprintf(f, "\n");
+  fclose(f);
 }
 
-uint16_t chuni_io_get_api_version(void)
-{
-    // 0x0102: adds chuni_io_led_init / chuni_io_led_set_colors (Chusan
-    // tower LED support). Reporting 0x0101 here was silently accepted
-    // for loading but chusanApp still demanded the LED exports below --
-    // report the version that actually matches what this DLL implements.
-    return 0x0102;
+uint16_t chuni_io_get_api_version(void) {
+  // 0x0102: adds chuni_io_led_init / chuni_io_led_set_colors (Chusan
+  // tower LED support). Reporting 0x0101 here was silently accepted
+  // for loading but chusanApp still demanded the LED exports below --
+  // report the version that actually matches what this DLL implements.
+  return 0x0102;
 }
 
-HRESULT chuni_io_jvs_init(void)
-{
-    if (!chuni_io_state_lock_initialized) {
-        InitializeCriticalSection(&chuni_io_state_lock);
-        chuni_io_state_lock_initialized = true;
-    }
+HRESULT chuni_io_jvs_init(void) {
+  if (!chuni_io_state_lock_initialized) {
+    InitializeCriticalSection(&chuni_io_state_lock);
+    chuni_io_state_lock_initialized = true;
+  }
 
-    chuni_io_log("chuni_io_jvs_init: ready");
-    return S_OK;
+  chuni_io_log("chuni_io_jvs_init: ready");
+  return S_OK;
 }
 
-void chuni_io_jvs_read_coin_counter(uint16_t *out)
-{
-    if (out == NULL) {
-        return;
-    }
+void chuni_io_jvs_read_coin_counter(uint16_t *out) {
+  if (out == NULL) {
+    return;
+  }
 
-    // No physical coin mech wired to the Pico in this build -- keep the
-    // keyboard-vk fallback pattern from the reference so a debug coin
-    // key still works if you want one later. For now this just reports
-    // whatever count has accumulated (always 0 unless you wire a coin
-    // input into the frame format).
-    *out = chuni_io_coins;
+  // No physical coin mech wired to the Pico in this build -- keep the
+  // keyboard-vk fallback pattern from the reference so a debug coin
+  // key still works if you want one later. For now this just reports
+  // whatever count has accumulated (always 0 unless you wire a coin
+  // input into the frame format).
+  *out = chuni_io_coins;
 }
 
-void chuni_io_jvs_poll(uint8_t *opbtn, uint8_t *beams)
-{
-    if (!chuni_io_state_lock_initialized) {
-        return;
-    }
+void chuni_io_jvs_poll(uint8_t *opbtn, uint8_t *beams) {
+  if (!chuni_io_state_lock_initialized) {
+    return;
+  }
 
-    EnterCriticalSection(&chuni_io_state_lock);
+  EnterCriticalSection(&chuni_io_state_lock);
 
-    if (chuni_io_latest_test_btn) {
-        *opbtn |= 0x01; /* Test */
-    }
-    if (chuni_io_latest_service_btn) {
-        *opbtn |= 0x02; /* Service */
-    }
+  if (chuni_io_latest_test_btn) {
+    *opbtn |= 0x01; /* Test */
+  }
+  if (chuni_io_latest_service_btn) {
+    *opbtn |= 0x02; /* Service */
+  }
 
-    for (int i = 0; i < 6; i++) {
-        if (chuni_io_latest_air[i]) {
-            *beams |= (1 << i);
-        }
+  for (int i = 0; i < 6; i++) {
+    if (chuni_io_latest_air[i]) {
+      *beams |= (1 << i);
     }
+  }
 
-    LeaveCriticalSection(&chuni_io_state_lock);
+  LeaveCriticalSection(&chuni_io_state_lock);
 }
 
-HRESULT chuni_io_slider_init(void)
-{
-    return S_OK;
+HRESULT chuni_io_slider_init(void) { return S_OK; }
+
+void chuni_io_slider_start(chuni_io_slider_callback_t callback) {
+  if (chuni_io_slider_thread != NULL) {
+    return;
+  }
+
+  chuni_io_slider_stop_flag = false;
+  chuni_io_slider_thread = (HANDLE)_beginthreadex(
+      NULL, 0, chuni_io_slider_thread_proc, (void *)callback, 0, NULL);
 }
 
-void chuni_io_slider_start(chuni_io_slider_callback_t callback)
-{
-    if (chuni_io_slider_thread != NULL) {
-        return;
-    }
+void chuni_io_slider_stop(void) {
+  if (chuni_io_slider_thread == NULL) {
+    return;
+  }
 
-    chuni_io_slider_stop_flag = false;
-    chuni_io_slider_thread = (HANDLE)_beginthreadex(
-            NULL, 0, chuni_io_slider_thread_proc, (void *)callback, 0, NULL);
+  chuni_io_slider_stop_flag = true;
+
+  WaitForSingleObject(chuni_io_slider_thread, INFINITE);
+  CloseHandle(chuni_io_slider_thread);
+  chuni_io_slider_thread = NULL;
+  chuni_io_slider_stop_flag = false;
 }
 
-void chuni_io_slider_stop(void)
-{
-    if (chuni_io_slider_thread == NULL) {
-        return;
-    }
-
-    chuni_io_slider_stop_flag = true;
-
-    WaitForSingleObject(chuni_io_slider_thread, INFINITE);
-    CloseHandle(chuni_io_slider_thread);
-    chuni_io_slider_thread = NULL;
-    chuni_io_slider_stop_flag = false;
-}
-
-void chuni_io_slider_set_leds(const uint8_t *rgb)
-{
-    // TODO: no LED-back-to-Pico path yet. Brokenithm's reference sends
-    // an "\x63LED..." packet back over the same UDP socket; to mirror
-    // that here you'd Serial.write() a distinct LED frame (e.g. prefix
-    // byte 0x4C 'L' + 96 bytes RGB) from this function and have the
-    // Pico firmware read it non-blockingly between packet sends. Left
-    // as a stub so the DLL still loads and runs without it.
-    (void)rgb;
+void chuni_io_slider_set_leds(const uint8_t *rgb) {
+  // TODO: no LED-back-to-Pico path yet. Brokenithm's reference sends
+  // an "\x63LED..." packet back over the same UDP socket; to mirror
+  // that here you'd Serial.write() a distinct LED frame (e.g. prefix
+  // byte 0x4C 'L' + 96 bytes RGB) from this function and have the
+  // Pico firmware read it non-blockingly between packet sends. Left
+  // as a stub so the DLL still loads and runs without it.
+  (void)rgb;
 }
 
 // -----------------------------------------------------------------------
@@ -196,20 +186,19 @@ void chuni_io_slider_set_leds(const uint8_t *rgb)
 // when LEDs would update, the signature is the first thing to check
 // against the actual chusanhook/chuni-dll.h struct for your build.
 // -----------------------------------------------------------------------
-HRESULT chuni_io_led_init(void)
-{
-    chuni_io_log("chuni_io_led_init: reporting LED board ready (no hardware wired yet)");
-    return S_OK;
+HRESULT chuni_io_led_init(void) {
+  chuni_io_log(
+      "chuni_io_led_init: reporting LED board ready (no hardware wired yet)");
+  return S_OK;
 }
 
-void chuni_io_led_set_colors(uint8_t board, uint8_t *rgb)
-{
-    // TODO: same as chuni_io_slider_set_leds -- no return path to the
-    // Pico yet. board distinguishes which LED board is being addressed;
-    // rgb is the color buffer (size per chuniio.h -- 198 bytes in the
-    // slider-adjacent LED path, unconfirmed for this specific function).
-    (void)board;
-    (void)rgb;
+void chuni_io_led_set_colors(uint8_t board, uint8_t *rgb) {
+  // TODO: same as chuni_io_slider_set_leds -- no return path to the
+  // Pico yet. board distinguishes which LED board is being addressed;
+  // rgb is the color buffer (size per chuniio.h -- 198 bytes in the
+  // slider-adjacent LED path, unconfirmed for this specific function).
+  (void)board;
+  (void)rgb;
 }
 
 // -----------------------------------------------------------------------
@@ -219,95 +208,96 @@ void chuni_io_led_set_colors(uint8_t board, uint8_t *rgb)
 // Pico enumerated on a different COM port after replug) if the link
 // drops.
 // -----------------------------------------------------------------------
-static unsigned int __stdcall chuni_io_slider_thread_proc(void *ctx)
-{
-    chuni_io_slider_callback_t callback = (chuni_io_slider_callback_t)ctx;
-    HANDLE hSerial = INVALID_HANDLE_VALUE;
-    sl_frame_t frame;
+static unsigned int __stdcall chuni_io_slider_thread_proc(void *ctx) {
+  chuni_io_slider_callback_t callback = (chuni_io_slider_callback_t)ctx;
+  HANDLE hSerial = INVALID_HANDLE_VALUE;
+  sl_frame_t frame;
 
-    while (!chuni_io_slider_stop_flag) {
-        if (hSerial == INVALID_HANDLE_VALUE) {
-            int port = sl_find_pico_port();
-            if (port < 0) {
-                chuni_io_log("waiting for Pico (VID_%04X&PID_%04X)...", PICO_USB_VID, PICO_USB_PID);
-                if (chuni_io_state_lock_initialized) {
-                    EnterCriticalSection(&chuni_io_state_lock);
-                    chuni_io_device_connected = false;
-                    LeaveCriticalSection(&chuni_io_state_lock);
-                }
-                uint8_t empty_pressure[32] = {0};
-                for (int i = 0; i < 1000 && !chuni_io_slider_stop_flag; i++) {
-                    callback(empty_pressure);
-                    Sleep(1);
-                }
-                continue;
-            }
-
-            chuni_io_log("found Pico on COM%d, connecting...", port);
-            hSerial = sl_open_port(port);
-            if (hSerial == INVALID_HANDLE_VALUE) {
-                chuni_io_log("failed to open COM%d, retrying...", port);
-                uint8_t empty_pressure[32] = {0};
-                for (int i = 0; i < 1000 && !chuni_io_slider_stop_flag; i++) {
-                    callback(empty_pressure);
-                    Sleep(1);
-                }
-                continue;
-            }
-
-            chuni_io_log("connected to COM%d", port);
-            if (chuni_io_state_lock_initialized) {
-                EnterCriticalSection(&chuni_io_state_lock);
-                chuni_io_device_connected = true;
-                LeaveCriticalSection(&chuni_io_state_lock);
-            }
-        }
-
-        if (!sl_read_frame(hSerial, &frame)) {
-            // Could be a transient bad-checksum frame (harmless, just
-            // retry) or a genuine disconnect. Distinguish by checking
-            // whether the handle is still valid.
-            DWORD errors;
-            COMSTAT status;
-            if (!ClearCommError(hSerial, &errors, &status)) {
-                chuni_io_log("serial link lost, will rescan");
-                CloseHandle(hSerial);
-                hSerial = INVALID_HANDLE_VALUE;
-                if (chuni_io_state_lock_initialized) {
-                    EnterCriticalSection(&chuni_io_state_lock);
-                    chuni_io_device_connected = false;
-                    LeaveCriticalSection(&chuni_io_state_lock);
-                }
-            }
-            uint8_t empty_pressure[32] = {0};
-            callback(empty_pressure);
-            continue;
-        }
-
+  while (!chuni_io_slider_stop_flag) {
+    if (hSerial == INVALID_HANDLE_VALUE) {
+      int port = sl_find_pico_port();
+      if (port < 0) {
+        chuni_io_log("waiting for Pico (VID_%04X&PID_%04X)...", PICO_USB_VID,
+                     PICO_USB_PID);
         if (chuni_io_state_lock_initialized) {
-            EnterCriticalSection(&chuni_io_state_lock);
-            memcpy(chuni_io_latest_air, frame.air, sizeof(chuni_io_latest_air));
-            chuni_io_latest_test_btn = frame.test_btn;
-            chuni_io_latest_service_btn = frame.service_btn;
-            
-            if (frame.coin_btn && !chuni_io_coin) {
-                chuni_io_coins++;
-            }
-            chuni_io_coin = frame.coin_btn;
-            LeaveCriticalSection(&chuni_io_state_lock);
+          EnterCriticalSection(&chuni_io_state_lock);
+          chuni_io_device_connected = false;
+          LeaveCriticalSection(&chuni_io_state_lock);
         }
-
-        uint8_t slider_pressure[32];
-        for (int i = 0; i < 32; i++) {
-            slider_pressure[i] = (frame.slider_bits[i / 8] & (1 << (i % 8))) ? 255 : 0;
+        uint8_t empty_pressure[32] = {0};
+        for (int i = 0; i < 1000 && !chuni_io_slider_stop_flag; i++) {
+          callback(empty_pressure);
+          Sleep(1);
         }
+        continue;
+      }
 
-        callback(slider_pressure);
+      chuni_io_log("found Pico on COM%d, connecting...", port);
+      hSerial = sl_open_port(port);
+      if (hSerial == INVALID_HANDLE_VALUE) {
+        chuni_io_log("failed to open COM%d, retrying...", port);
+        uint8_t empty_pressure[32] = {0};
+        for (int i = 0; i < 1000 && !chuni_io_slider_stop_flag; i++) {
+          callback(empty_pressure);
+          Sleep(1);
+        }
+        continue;
+      }
+
+      chuni_io_log("connected to COM%d", port);
+      if (chuni_io_state_lock_initialized) {
+        EnterCriticalSection(&chuni_io_state_lock);
+        chuni_io_device_connected = true;
+        LeaveCriticalSection(&chuni_io_state_lock);
+      }
     }
 
-    if (hSerial != INVALID_HANDLE_VALUE) {
+    if (!sl_read_frame(hSerial, &frame)) {
+      // Could be a transient bad-checksum frame (harmless, just
+      // retry) or a genuine disconnect. Distinguish by checking
+      // whether the handle is still valid.
+      DWORD errors;
+      COMSTAT status;
+      if (!ClearCommError(hSerial, &errors, &status)) {
+        chuni_io_log("serial link lost, will rescan");
         CloseHandle(hSerial);
+        hSerial = INVALID_HANDLE_VALUE;
+        if (chuni_io_state_lock_initialized) {
+          EnterCriticalSection(&chuni_io_state_lock);
+          chuni_io_device_connected = false;
+          LeaveCriticalSection(&chuni_io_state_lock);
+        }
+      }
+      uint8_t empty_pressure[32] = {0};
+      callback(empty_pressure);
+      continue;
     }
 
-    return 0;
+    if (chuni_io_state_lock_initialized) {
+      EnterCriticalSection(&chuni_io_state_lock);
+      memcpy(chuni_io_latest_air, frame.air, sizeof(chuni_io_latest_air));
+      chuni_io_latest_test_btn = frame.test_btn;
+      chuni_io_latest_service_btn = frame.service_btn;
+
+      if (frame.coin_btn && !chuni_io_coin) {
+        chuni_io_coins++;
+      }
+      chuni_io_coin = frame.coin_btn;
+      LeaveCriticalSection(&chuni_io_state_lock);
+    }
+
+    uint8_t slider_pressure[32];
+    for (int i = 0; i < 32; i++) {
+      slider_pressure[i] =
+          (frame.slider_bits[i / 8] & (1 << (i % 8))) ? 255 : 0;
+    }
+
+    callback(slider_pressure);
+  }
+
+  if (hSerial != INVALID_HANDLE_VALUE) {
+    CloseHandle(hSerial);
+  }
+
+  return 0;
 }

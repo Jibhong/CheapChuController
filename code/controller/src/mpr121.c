@@ -14,8 +14,8 @@
 
 #define IO_TIMEOUT_US 1000
 
-#define TOUCH_THRESHOLD_BASE 60
-#define RELEASE_THRESHOLD_BASE 55
+#define TOUCH_THRESHOLD_BASE 30
+#define RELEASE_THRESHOLD_BASE 29.9
 
 #define MPR121_TOUCH_STATUS_REG 0x00
 #define MPR121_OUT_OF_RANGE_STATUS_0_REG 0x02
@@ -109,6 +109,7 @@ bool mpr121_init(uint8_t i2c_addr) {
       i2c_addr, 0x5C,
       0b00010000); // AFES=6 samples, same as AFES in 0x7B, Global CDC=16uA
   write_reg(i2c_addr, 0x5D, 0b00101000); // CT=0.5us, TDS=4samples, TDI=16ms
+  // write_reg(i2c_addr, 0x5D, 0b10001000); // CDT=4us, SFI=6 samples, ESI=1ms
   write_reg(i2c_addr, 0x5E,
             0x80); // Set baseline calibration enabled, baseline loading 5MSB
 

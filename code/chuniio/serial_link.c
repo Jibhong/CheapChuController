@@ -17,6 +17,19 @@
 // -----------------------------------------------------------------
 int sl_find_pico_port(void)
 {
+    // Wine (used for CVT/testing) doesn't populate SetupAPI hardware-ID
+    // info for devices exposed via a dosdevices symlink, so the VID/PID
+    // scan below never finds anything there. Allow an env-var override
+    // to skip straight to a known COM number in that environment.
+    char env_port[16];
+    if (GetEnvironmentVariableA("CHUNIIO_COM", env_port, sizeof(env_port)) > 0) {
+        int port = atoi(env_port);
+        if (port > 0) {
+            return port;
+        }
+    }
+
+
     char target[64];
     snprintf(target, sizeof(target), "VID_%04X&PID_%04X", PICO_USB_VID, PICO_USB_PID);
 

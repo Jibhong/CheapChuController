@@ -245,6 +245,23 @@ void loop() {
 
   send_packet();
 
+  // Turn on board LED if any slider/button is pressed or any air sensor is blocked
+  bool key_down = (slider_bits[0] != 0 || slider_bits[1] != 0 || slider_bits[2] != 0 || slider_bits[3] != 0 || test_btn || service_btn || coin_btn);
+
+  bool air_blocked = false;
+  for (int i = 0; i < 6; i++) {
+    if (air_beams[i] == 1) {
+      air_blocked = true;
+      break;
+    }
+  }
+
+  if (key_down || air_blocked) {
+    digitalWrite(LED_BUILTIN, HIGH);
+  } else {
+    digitalWrite(LED_BUILTIN, LOW);
+  }
+
   scanReboot();
 
   delay(1);
